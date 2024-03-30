@@ -25,7 +25,7 @@ plt.rcParams['axes.axisbelow'] = True
 stock = 'PETR4.SA'
 initial_date = '2005-01-01'
 end_date = '2020-12-31'
-name = 'PETRO'
+name = 'PETROBRAS - PETR4'
 period = '1d'
 
 data_base = pd.DataFrame(yf.download(stock,start=initial_date,end=end_date,interval=period)['Adj Close'])
@@ -71,7 +71,8 @@ plt.subplot(224)
 sci.probplot(returns,dist='norm',plot=plt)
 plt.title(f'QQ-plot {name}')
 plt.grid(True)
-plt.suptitle(f'Análise do comportamento dos retornos do {name} de {initial_date} a {end_date}', fontsize=20, color='w')
+plt.suptitle(f'Análise do comportamento dos retornos da {name}\n'
+             f'{initial_date} a {end_date}', fontsize=20, color='w')
 
 
 plt.subplots_adjust(hspace=0.45)  # Ajusta o espaço vertical entre os subplots
