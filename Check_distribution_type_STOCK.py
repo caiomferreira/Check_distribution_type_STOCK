@@ -58,7 +58,7 @@ plt.subplot(222)
 plt.hist(returns,bins=20,density=True,color='royalblue')
 plt.xlabel('Calsse - Return')
 plt.ylabel('Freguency')
-plt.title(f'Histograma dos Retornos do {name}')
+plt.title(f'Histograma\nRetornos do {name}')
 xmin, xmax = plt.xlim()
 media = st.mean(returns)
 desv_pad = st.pstdev(returns)
@@ -71,7 +71,7 @@ plt.subplot(224)
 sci.probplot(returns,dist='norm',plot=plt)
 plt.title(f'QQ-plot {name}')
 plt.grid(True)
-plt.suptitle(f'Análise do comportamento dos retornos da {name}\n'
+plt.suptitle(f'Análise do comportamento\n retornos da {name}\n'
              f'{initial_date} a {end_date}', fontsize=20, color='w')
 
 
